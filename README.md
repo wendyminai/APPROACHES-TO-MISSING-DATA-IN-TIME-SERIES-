@@ -29,7 +29,10 @@ The MICE method involves iteratively imputing the missing values in a dataset us
 
 I use the [scikit-learn’s IterativeImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html#sklearn.impute.IterativeImputer) to implement this approach (note: this estimator is still experimental as of 2023 Jan). The original MICE approach will return multiple imputations. However, the implementation of scikit-learn will only return a single imputation.
 
-I still obtain multiple imputations by a trick: first, I segment the raw signal into rolling windows and add month info to the windows. Then MICE will impute the missing values for each window. Since one data point could appear in multiple windows, we will have numerous imputations for the same data points.<img width="681" alt="Screen Shot 2023-01-11 at 9 54 06 AM" src="https://user-images.githubusercontent.com/111389636/211853167-0f4e5cf0-70d2-4fa2-8aea-5b45cd64dac9.png">
+I still obtain multiple imputations by a trick: first, I segment the raw signal into rolling windows and add month info to the windows. Then MICE will impute the missing values for each window. Since one data point could appear in multiple windows, we will have numerous imputations for the same data points.
+
+<img width="681" alt="Screen Shot 2023-01-11 at 9 54 06 AM" src="https://user-images.githubusercontent.com/111389636/211853167-0f4e5cf0-70d2-4fa2-8aea-5b45cd64dac9.png">
+
 The figure below shows the imputation results
 <img width="865" alt="Screen Shot 2023-01-11 at 9 54 24 AM" src="https://user-images.githubusercontent.com/111389636/211853238-90fe70fc-ebcc-4e28-9220-828c2686786b.png">
 
