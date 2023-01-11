@@ -5,3 +5,5 @@ I’ll focus on univariate time series most time. We can impute each time series
 
 # Example dataset
 I’ll use a time series from the public [world energy consumption dataset](https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set). Figure 1 shows the aggregated daily energy consumption. Then I randomly pick four periods (two with ten days, two with 30 days) and remove the data. We will try to impute those four periods.
+
+<img width="684" alt="Screen Shot 2023-01-11 at 9 41 29 AM" src="https://user-images.githubusercontent.com/111389636/211849863-92510806-583f-45d3-96e3-a6b45a81999b.png">
